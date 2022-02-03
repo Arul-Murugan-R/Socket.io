@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>chatter box</title>
+        <link href="chatbox.css" rel="stylesheet" type="text/css" >
+        <script src="https://kit.fontawesome.com/f6369706ad.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        
+        <div id="chat">
+            <!-- <button type="button" id="btn" >Start Chatting</button> -->
+            <!-- <a id="text"></a><br>
+            <img id="photo"><br> -->
+            <!-- <textarea id="add"></textarea> -->
+            <div id="content"></div>
+            <input type="text" placeholder="Enter your message" id="add">
+            <i class="far fa-image" id="photo" onclick="addimg()"></i>
+            <button id="btn" onclick="submit()">submit</button>
+        </div>
+        <script>
+            var idea=0;
+            var add =document.querySelector("#add")
+            var img = document.querySelector("#photo")
+            var content = document.querySelector("#content")
+            var main = document.querySelector("#chat")
+            /*start.addEventListener("click",function(){
+                sub.style.display="inline"
+                start.style.display="none"
+            })*/
+            /*function submit() {
+                var message = document.querySelector('#add').value
+                console.log(message)
+                add.innerHTML = message
+                add.style.backgroundColor ="white"
+                idea=idea+1
+                console.log(idea)
+            }
+            function addimg(){
+                alert("Enter a valid url to upload img in the prompt")
+                var imgp=prompt("Enter a valid url to upload")
+                //img.innerHTML =""
+                img.src=imgp
+                idea=idea+1
+                console.log(idea)
+            }*/
+            function submit(){
+                content.appendChild(document.createElement("br"))
+                var message = document.querySelector('#add').value
+                var ele=document.createElement("a")
+                console.log(ele)
+                var elec=document.createTextNode(message)
+                ele.appendChild(elec)
+                content.appendChild(ele)
+                content.appendChild(document.createElement("br"))
+
+            }
+            function addimg(){
+                var imgp=prompt("Enter a valid url to upload")
+                content.appendChild(document.createElement("br"))
+                var imgtag=document.createElement("img")
+                imgtag.src=imgp
+                content.appendChild(imgtag)
+                console.log(imgtag)
+                content.appendChild(document.createElement("br"))
+                
+            }
+            
+                imgtag.classList.add(".show")
+            
+            add.addEventListener('change',submit)
+        </script>
+    </body>
+</html>
