@@ -39,7 +39,7 @@ const socket = io("http://localhost:3080/");
                 dis(msg,"end")
             })
             function dis(message,align){
-                content.appendChild(document.createElement("br"))
+                // content.appendChild(document.createElement("br"))
                 var ele=document.createElement("a")
                 var div=document.createElement("div")
                 // console.log(ele)
@@ -49,7 +49,7 @@ const socket = io("http://localhost:3080/");
                 div.appendChild(ele)
                 div.classList.add(`text-${align}`)
                 content.appendChild(div)
-                content.appendChild(document.createElement("br"))
+                // content.appendChild(document.createElement("br"))
                 add.value=""
             }
             function addimg(){
@@ -62,14 +62,14 @@ const socket = io("http://localhost:3080/");
                 sendImg(img,"end")
             })
             function sendImg(imgp,align){
-                content.appendChild(document.createElement("br"))
+                // content.appendChild(document.createElement("br"))
                 var div=document.createElement("div")
                 var imgtag=document.createElement("img")
                 imgtag.src=imgp
                 div.appendChild(imgtag)
                 div.classList.add(`text-${align}`)
                 content.appendChild(div)
-                content.appendChild(document.createElement("br"))
+                // content.appendChild(document.createElement("br"))
                 
             }
                 imgtag.classList.add(".show")
