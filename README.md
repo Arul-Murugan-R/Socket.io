@@ -17,6 +17,8 @@ Use this cdn
 ```
 npm install socket.io
 ```
+* For more content
 
+Google ```socket.io```
 # Demo
 <img src="https://github.com/Arul-Murugan-R/Socket.io/blob/main/socket.io.png" width="900px" height="400px"/>
